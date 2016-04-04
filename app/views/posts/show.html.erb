@@ -2,6 +2,7 @@
 <h1><%= @post.user.username %>
 <h1><%= @post.title %></h1>
 <p><%= @post.description %></p>
+<%= time_tag(@post.created_at) %>
 <%= image_tag(@post.image.url(:medium)) %>
 <!-- shows total count size for comments-->
 <i class="fa fa-comment-o"></i><%= pluralize(@post.comments.count, "Comment") %>

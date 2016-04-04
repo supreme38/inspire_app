@@ -1,8 +1,20 @@
 <!-- loops through each post and displays the following -->
-<% @posts.each do |post| %>
-  <%= link_to image_tag(post.image.url(:small)), post %>
-  <%= link_to post.title, post %>
-  <i class="fa fa-comment-o"></i><%= post.comments.count %>
-  <i class="fa fa-thumbs-o-up"></i><%= post.get_likes.size %>
-  <i class="fa fa-thumbs-o-down"></i><%= post.get_dislikes.size %>
-<% end %>
+<div id="index">
+  <% @posts.each do |post| %>
+    <wrapper class="post">
+      <wrapper class="image">
+        <%= link_to (image_tag post.image.url(:small), :class => 'imgr'), post %>
+      </wrapper>
+      <wrapper class="info">
+        <span class="title"><%= post.title %></span>
+          <wrapper class='icons'>
+            <i class="fa fa-comment-o"></i><%= post.comments.count %>
+            <i class="fa fa-thumbs-o-up"></i><%= post.get_likes.size %>
+            <i class="fa fa-thumbs-o-down"></i><%= post.get_dislikes.size %>
+          </wrapper>
+      </wrapper>
+    </wrapper>
+  <% end %>
+  <div id="space"></div>
+
+</div>
