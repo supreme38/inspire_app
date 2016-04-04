@@ -1,3 +1,4 @@
+<!-- form to post a comment/reply to comment -->
 <%= form_for ([@post, @post.comments.build]) do |f| %>
 	Reply <%= f.text_field :content %><br/>
 	<%= f.submit %>

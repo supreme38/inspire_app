@@ -1,13 +1,16 @@
+<!-- shows user information -->
 <h1><%= @post.user.username %>
 <h1><%= @post.title %></h1>
 <p><%= @post.description %></p>
 <%= image_tag(@post.image.url(:medium)) %>
-<%= pluralize(@post.comments.count, "Comment") %>
-Likes: <%= @post.get_upvotes.size %>
-Dislike: <%= @post.get_downvotes.size %>
+<!-- shows total count size for comments-->
+<i class="fa fa-comment-o"></i><%= pluralize(@post.comments.count, "Comment") %>
+  <i class="fa fa-thumbs-o-up"><%= @post.get_upvotes.size %>
+  <i class="fa fa-thumbs-o-down"><%= @post.get_downvotes.size %>
+<!-- allow user to upvote and downvote post -->
 <%= link_to "Like", like_post_path(@post), method: :get %>
 <%= link_to "Dislike", dislike_post_path(@post), method: :get %>
-
+<!-- shows comments -->
 <% @comments.each do |comment| %>
 <%= comment.user.username %>
 <%= comment.content %>
@@ -15,6 +18,10 @@ Dislike: <%= @post.get_downvotes.size %>
 
 <%= render partial: 'comments/form' %>
 
+
 <%= link_to "Home", root_path %>
+<!-- edit/delete will only show if the post user is the same as current user -->
+<% if @post.user == current_user %>
 <%= link_to "Edit", edit_post_path(@post) %>
 <%= link_to "Delete", post_path(@post), method: :delete %>
+<% end %>

@@ -1,9 +1,8 @@
+<!-- loops through each post and displays the following -->
 <% @posts.each do |post| %>
   <%= link_to image_tag(post.image.url(:small)), post %>
   <%= link_to post.title, post %>
-  <%= post.comments.count %>Comments
-  Likes:<%= post.get_likes.size %>
-  Dislikes:<%= post.get_dislikes.size %>
+  <i class="fa fa-comment-o"></i><%= post.comments.count %>
+  <i class="fa fa-thumbs-o-up"></i><%= post.get_likes.size %>
+  <i class="fa fa-thumbs-o-down"></i><%= post.get_dislikes.size %>
 <% end %>
-
-<%= link_to "Add New Post", new_post_path %>

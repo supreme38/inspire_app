@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
 
+  # requirement for devise gem
   devise_for :users
 
+  # adding member route because ir requires and ID to
+  # post to acts_as_votable gem
+  # comments is nested in post for references
   resources :posts do
     member do
       get "like", to: "posts#upvote"
@@ -10,8 +14,8 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+  # root goes to post.html.erb
   root 'posts#index'
-
 end
 
 #                   Prefix Verb   URI Pattern                                 Controller#Action

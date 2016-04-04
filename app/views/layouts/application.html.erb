@@ -4,13 +4,17 @@
   <title>FinalApp2</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.min.css"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
+<!-- navbar for users -->
 <p>
 <% if user_signed_in? %>
-  Logged in as <strong><%= current_user.email %></strong>.
+  Logged in as <strong><%= current_user.username %></strong>
+  <%= link_to "Add New Post", new_post_path %>
   <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
   <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
 <% else %>
@@ -19,9 +23,14 @@
 <% end %>
 </p>
 
+<!-- devise -->
+<% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
 
 <%= yield %>
 
