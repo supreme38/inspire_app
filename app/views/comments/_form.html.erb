@@ -1,0 +1,4 @@
+<%= form_for ([@post, @post.comments.build]) do |f| %>
+	Reply <%= f.text_field :content %><br/>
+	<%= f.submit %>
+<% end %>
