@@ -29,10 +29,11 @@
    padding: 0;
  }
 
+
  #navBar {
    text-align: right;
    margin-top: 3%;
-   margin-bottom: 3%;
+   margin-bottom: 4%;
  }
 
  .navbar-link {
@@ -45,7 +46,7 @@
  }
 
  #index {
-   width: 90%;
+   width: 80%;
    height: 100%;
    margin-left: auto;
    margin-right: auto;
@@ -53,7 +54,7 @@
 
  .post {
   float: left;
-  width: 30%;
+  width: 22%;
   padding-left: 1.5%;
   padding-right: 1.5%;
   padding-top: 2%;
@@ -80,11 +81,24 @@ i {
  }
 
  .imgr {
-   height: 300px;
+   height: 250px;
    width: 100%;
    object-fit: cover;
  }
 
 .title {
   font-family: 'Pangram2';
+}
+
+#spacing {
+  padding-top: 35%;
+}
+
+.border {
+  border-bottom: 2px solid;
+  width: 85%;
+  margin-bottom: 3%;
+  margin-left: auto;
+  margin-right: auto;
+  color: #E1E3E4;
 }
