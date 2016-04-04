@@ -48,3 +48,4 @@ end
 # My Gems
 gem 'devise'
 gem "paperclip", "~> 5.0.0.beta1"
+gem 'acts_as_votable', '~> 0.10.0'
