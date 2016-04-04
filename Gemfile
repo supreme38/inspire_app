@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.2.3'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -49,3 +50,6 @@ end
 gem 'devise'
 gem "paperclip", "~> 5.0.0.beta1"
 gem 'acts_as_votable', '~> 0.10.0'
+
+# Heroku deployment
+gem 'rails_12factor', group: :production
