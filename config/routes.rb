@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :posts do
+    member do
+      get "like", to: "posts#upvote"
+      get "dislike", to: "posts#downvote"
+    end
     resources :comments
   end
 
@@ -10,7 +14,7 @@ Rails.application.routes.draw do
 
 end
 
-# Prefix Verb   URI Pattern                                 Controller#Action
+#                   Prefix Verb   URI Pattern                                 Controller#Action
 #         new_user_session GET    /users/sign_in(.:format)                    devise/sessions#new
 #             user_session POST   /users/sign_in(.:format)                    devise/sessions#create
 #     destroy_user_session DELETE /users/sign_out(.:format)                   devise/sessions#destroy
@@ -26,6 +30,8 @@ end
 #                          PATCH  /users(.:format)                            devise/registrations#update
 #                          PUT    /users(.:format)                            devise/registrations#update
 #                          DELETE /users(.:format)                            devise/registrations#destroy
+#                like_post GET    /posts/:id/like(.:format)                   posts#upvote
+#             dislike_post GET    /posts/:id/dislike(.:format)                posts#downvote
 #            post_comments GET    /posts/:post_id/comments(.:format)          comments#index
 #                          POST   /posts/:post_id/comments(.:format)          comments#create
 #         new_post_comment GET    /posts/:post_id/comments/new(.:format)      comments#new

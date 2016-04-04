@@ -3,6 +3,8 @@
 <p><%= @post.description %></p>
 <%= image_tag(@post.image.url(:medium)) %>
 <%= pluralize(@post.comments.count, "Comment") %>
+<%= link_to like_post_path(@post), method: :get %>
+<%= link_to dislike_post_path(@post), method: :get %>
 
 <% @comments.each do |comment| %>
 <%= comment.user.username %>
