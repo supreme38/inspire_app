@@ -2,6 +2,8 @@
   <%= link_to image_tag(post.image.url(:small)), post %>
   <%= link_to post.title, post %>
   <%= post.comments.count %>Comments
+  Likes:<%= post.get_likes.size %>
+  Dislikes:<%= post.get_dislikes.size %>
 <% end %>
 
 <%= link_to "Add New Post", new_post_path %>
