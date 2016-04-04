@@ -1,7 +1,7 @@
 <h1><%= @post.user.username %>
 <h1><%= @post.title %></h1>
 <p><%= @post.description %></p>
-<img src=<%= @post.image.url(:medium) %>/>
+<%= image_tag(@post.image.url(:medium)) %>
 
 <%= link_to "Home", root_path %>
 <%= link_to "Edit", edit_post_path(@post) %>
