@@ -5,8 +5,8 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"></script>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
-          <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,100,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
     <link rel="stylesheet" href="animate.min.css"></script>
     <%= csrf_meta_tags %>
   </head>
@@ -14,6 +14,7 @@
 
     <!-- navbar for users -->
     <div id="navBar">
+      <h1 id="appName">app_name</h1>
       <% if user_signed_in? %>
         <strong class="navbar-link" id="username"><%= current_user.username %></strong>
         <%= link_to "home", root_path, :class => 'navbar-link' %>

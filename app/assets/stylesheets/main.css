@@ -29,6 +29,15 @@ body {
   color: black;
 }
 
+#appName {
+  position: absolute;
+  text-align: left;
+  font-size: 30px;
+  margin-left: 4%;
+  margin-top: 0px;
+  font-weight: 100;
+}
+
 #username {
   font-size: 25px;
 }
@@ -78,9 +87,6 @@ i {
   font-weight: bold;
 }
 
-#spacing {
- padding-top: 35%;
-}
 
 .border {
  border-bottom: 2px solid;
@@ -166,4 +172,9 @@ i {
 
 li {
   list-style: none;
+}
+
+.border2{
+  position: absolute;
+  margin-top: 80%;
 }
