@@ -10,11 +10,11 @@
     <button class="share"><%= link_to "HOMEPAGE", "http://#{@post.description}", :class => 'click' %></button>
     <!-- allow user to upvote and downvote post -->
     <button class="action"><%= link_to "LIKE", like_post_path(@post), method: :get, :class => 'click' %></button>
-    <button class="action"><%= link_to "DISLIKE", dislike_post_path(@post), method: :get, :class => 'click' %></button>
+    <button class="create"><%= link_to "DISLIKE", dislike_post_path(@post), method: :get, :class => 'click' %></button>
 
     <% if @post.user == current_user %>
-      <button class="create"><%= link_to "EDIT", edit_post_path(@post), :class => 'click' %></button>
-      <button class="create"><%= link_to "DELETE", post_path(@post), method: :delete, :class => 'click' %></button>
+      <button><%= link_to "EDIT", edit_post_path(@post), :class => 'options' %></button>
+      <button><%= link_to "DELETE", post_path(@post), method: :delete, :class => 'options' %></button>
     <% end %>
 
     </br></br>
@@ -32,7 +32,7 @@
       <wrapper>
       </br>
         <div class="username"><%= comment.user.username %></div>
-        <div class="time"><%= time_ago_in_words(comment.created_at) %> ago</div>
+        <div class="time">&middot <%= time_ago_in_words(comment.created_at) %> ago</div>
       </wrapper>
       </br>
       <div class="comment"><%= comment.content %></div>

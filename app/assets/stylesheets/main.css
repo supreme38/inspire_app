@@ -26,6 +26,7 @@ body {
 .navbar-link {
   padding-right: 2%;
   text-decoration: none;
+  color: black;
 }
 
 #username {
@@ -120,6 +121,7 @@ i {
 
 .username {
   display: inline;
+  color: orange;
 }
 
 #comments {
@@ -144,7 +146,7 @@ i {
   margin-top: 5%;
 }
 
-/*#commentBorder {
-  border-bottom: 1px solid;
-  margin-top: 1%;
-}*/
+.options {
+  text-decoration: none!important;
+  color: red;
+}
