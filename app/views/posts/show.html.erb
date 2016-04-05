@@ -1,28 +1,44 @@
-<!-- shows user information -->
-<h1><%= @post.user.username %>
-<h1><%= @post.title %></h1>
-<p><%= @post.description %></p>
-<%= time_tag(@post.created_at) %>
-<%= image_tag(@post.image.url(:medium)) %>
-<!-- shows total count size for comments-->
-<i class="fa fa-comment-o"></i><%= pluralize(@post.comments.count, "Comment") %>
-  <i class="fa fa-thumbs-o-up"><%= @post.get_upvotes.size %>
-  <i class="fa fa-thumbs-o-down"><%= @post.get_downvotes.size %>
-<!-- allow user to upvote and downvote post -->
-<%= link_to "Like", like_post_path(@post), method: :get %>
-<%= link_to "Dislike", dislike_post_path(@post), method: :get %>
-<!-- shows comments -->
-<% @comments.each do |comment| %>
-<%= comment.user.username %>
-<%= comment.content %>
-<% end %>
+<div id="show">
+  <div id="container1">
+    <!-- shows user information -->
+    <h1><%= @post.title %></h1>
+    <h4><%= @post.user.username %></h4>
+    <%= image_tag(@post.image.url(:medium)) %>
+    </br>
+    </br>
+    <!-- edit/delete will only show if the post user is the same as current user -->
+    <button class="share"><%= link_to "HOMEPAGE", "http://#{@post.description}", :class => 'click' %></button>
+    <!-- allow user to upvote and downvote post -->
+    <button class="action"><%= link_to "LIKE", like_post_path(@post), method: :get, :class => 'click' %></button>
+    <button class="action"><%= link_to "DISLIKE", dislike_post_path(@post), method: :get, :class => 'click' %></button>
 
-<%= render partial: 'comments/form' %>
+    <% if @post.user == current_user %>
+      <button class="create"><%= link_to "EDIT", edit_post_path(@post), :class => 'click' %></button>
+      <button class="create"><%= link_to "DELETE", post_path(@post), method: :delete, :class => 'click' %></button>
+    <% end %>
 
+    </br></br>
+    <i class="fa fa-thumbs-o-up"></i><%= @post.get_upvotes.size %>
+    <i class="fa fa-thumbs-o-down"></i><%= @post.get_downvotes.size %>
 
-<%= link_to "Home", root_path %>
-<!-- edit/delete will only show if the post user is the same as current user -->
-<% if @post.user == current_user %>
-<%= link_to "Edit", edit_post_path(@post) %>
-<%= link_to "Delete", post_path(@post), method: :delete %>
-<% end %>
+    <!-- <h4>Posted <%= time_ago_in_words(@post.created_at) %></h4> -->
+  </div>
+
+  <div id="container2">
+    <!-- shows comments -->
+    <div id="comments"><i class="fa fa-comment-o"></i><%= pluralize(@post.comments.count, "Comment") %></div>
+    <div class="line"></div>
+    <% @comments.each do |comment| %>
+      <wrapper>
+      </br>
+        <div class="username"><%= comment.user.username %></div>
+        <div class="time"><%= time_ago_in_words(comment.created_at) %> ago</div>
+      </wrapper>
+      </br>
+      <div class="comment"><%= comment.content %></div>
+    <% end %>
+    <div class="line lin2"></div>
+    </br>
+    <%= render partial: 'comments/form' %>
+  </div>
+</div>

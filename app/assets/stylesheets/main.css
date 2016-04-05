@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
   font-family: 'Pangram';
   src: url('/assets/Pangram-ExtraLight.otf');
 }
@@ -6,10 +6,11 @@
 @font-face {
   font-family: 'Pangram2';
   src: url('/assets/Pangram-Regular.otf');
-}
+}*/
 
 body {
-  font-family: 'Pangram';
+  /*font-family: 'Pangram';*/
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -19,6 +20,7 @@ body {
   text-align: right;
   margin-top: 3%;
   margin-bottom: 4%;
+  margin-right: 2%;
 }
 
 .navbar-link {
@@ -72,7 +74,7 @@ i {
 }
 
 .title {
- font-family: 'Pangram2';
+  font-weight: bold;
 }
 
 #spacing {
@@ -87,3 +89,62 @@ i {
  margin-right: auto;
  color: #E1E3E4;
 }
+
+#show {
+  width: 80%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#container1 {
+  float: left;
+  margin-right: 3%;
+}
+
+#container2{
+  float: left;
+  width: 40%;
+  height: 100%;
+  margin-top: 60px;
+}
+
+.click {
+  text-decoration: none!important;
+  color: white;
+}
+
+.time {
+  display: inline;
+}
+
+.username {
+  display: inline;
+}
+
+#comments {
+  font-size: 20px;
+}
+
+.line {
+  border-bottom: 1px solid;
+  margin-top: 1%;
+  color: #E1E3E4;
+}
+
+.line2 {
+  margin-bottom: 2%;
+}
+
+.comment {
+  color: grey;
+}
+
+#createComment {
+  margin-top: 5%;
+}
+
+/*#commentBorder {
+  border-bottom: 1px solid;
+  margin-top: 1%;
+}*/
