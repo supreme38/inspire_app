@@ -1,7 +1,9 @@
 <!-- form to create a new post -->
+<div class="form">
 <%= form_for @post do |f| %>
-	Title: <%= f.text_field :title %><br/>
-	Website Link: <%= f.text_field :description %><br/>
-	<%= f.file_field :image %>
+	<%= f.text_field :title, :placeholder => "                 title" %><br/><br/>
+	<%= f.text_field :description, :placeholder => "             website"%><br/><br/>
+	<%= f.file_field :image, :class => "file" %><br/><br/>
 	<%= f.submit %>
 <% end %>
+</div>
