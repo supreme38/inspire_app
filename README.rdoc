@@ -11,6 +11,6 @@ A simple website to post a sample of your project and link to your website.
 * acts_as_votable
 
 === Features
-  *CRUD functionality
-  *Like / Dislike
-  *Comments
+* CRUD functionality
+* Like / Dislike
+* Comments
