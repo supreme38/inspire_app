@@ -2,15 +2,15 @@
 
 A simple website to post a sample of your project and link to your website.
 
-= Technologies Used
-  * Ruby
-  * Rails
-  * PostgreSQL
-  * devise
-  * paperclip
-  * acts_as_votable
+=== Technologies Used
+  *Ruby
+  *Rails
+  *PostgreSQL
+  *devise
+  *paperclip
+  *acts_as_votable
 
-= Features
-  * CRUD functionality
-  * Like / Dislike
-  * Comments
+=== Features
+  *CRUD functionality
+  *Like / Dislike
+  *Comments
