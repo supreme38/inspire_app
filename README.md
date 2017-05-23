@@ -6,8 +6,8 @@
 Heroku does not like it when I upload pictures directly onto their servers. Upload pictures will get deleted when server goes idle. But you can still test a fully working live demo [here](https://inspired-site.herokuapp.com/).
 
 ## Features
-- Share your projects
-- Post comments
+- Post your projects
+- Comment section
 - Like and dislikes
 
 ## Prerequisites
