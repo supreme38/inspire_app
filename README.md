@@ -3,7 +3,7 @@
 
 ![Preview](http://www.vincent.engineer/assets/images/inspired.gif)
 
-Heroku does not like it when I upload pictures directly onto their servers. Upload pictures will get deleted when server goes idle. But you can test a fully working live demo [here](https://inspired-site.herokuapp.com/)
+Heroku does not like it when I upload pictures directly onto their servers. Upload pictures will get deleted when server goes idle. But you can still test a fully working live demo [here](https://inspired-site.herokuapp.com/).
 
 ## Features
 - Share your projects
