@@ -1,4 +1,4 @@
-# Minify
+# Inspired
 >A simple web app to share your creative projects with others.
 
 ![Preview](http://www.vincent.engineer/assets/images/inspired.gif)
