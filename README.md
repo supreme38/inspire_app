@@ -7,8 +7,8 @@ Heroku does not like it when I upload pictures directly onto their servers. Uplo
 
 ## Features
 - Post your projects
-- Comment section
-- Like and dislikes
+- Comments section
+- Likes and dislikes
 
 ## Prerequisites
 - [PostgreSQL](https://www.postgresql.org/docs/10/static/tutorial-start.html)
