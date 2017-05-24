@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: final_app2_development
+  database: Inspired_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -57,7 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: final_app2_test
+  database: Inspired_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: final_app2_production
-  username: final_app2
+  database: Inspired_production
+  username: Inspired
   password: <%= ENV['FINAL_APP2_DATABASE_PASSWORD'] %>
