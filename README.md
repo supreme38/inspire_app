@@ -15,9 +15,9 @@ Heroku does not like it when I upload pictures directly onto their servers. Uplo
 - [Rails](http://guides.rubyonrails.org/getting_started.html)
 
 ## Installation
-```git clone https://github.com/vincentliu38/i-need-inspiration```
+```git clone https://github.com/vincentliu38/inspired```
 
-```cd i-need-inspiration```
+```cd inspired```
 
 ```bundle install```
 
@@ -30,4 +30,4 @@ Heroku does not like it when I upload pictures directly onto their servers. Uplo
 
 
 ## License
-This project is licensed under the MIT License. For more information see [LICENSE](https://github.com/vincentliu38/i-need-inspiration/blob/master/LICENSE) file.
+This project is licensed under the MIT License. For more information see [LICENSE](https://github.com/vincentliu38/inspired/blob/master/LICENSE) file.
